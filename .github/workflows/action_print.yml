@@ -8,7 +8,10 @@ jobs:
     steps:
       - name: first print
         run: echo this is a first print
+      - name: impossible action
+        run: ./file_doesn_t_exist.sh
   second_print:
+    name: my second print job
     needs: first_print
     runs-on: ubuntu-latest
     steps:
