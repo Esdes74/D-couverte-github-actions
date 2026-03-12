@@ -26,4 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send hello world
-        run: curl -X POST ${{ secrets.WEBHOOK_URL }} -H 'Content-type: application/json' --data "{\"text\": \"Hello world\"}"
+        run: |
+          MESSAGE="{\"text\": \"Hello world\"}"
+          curl -X POST ${{ secrets.WEBHOOK_URL }} -H 'Content-type: application/json' --data $MESSAGE
