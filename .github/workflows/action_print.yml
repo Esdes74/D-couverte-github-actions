@@ -11,6 +11,7 @@ jobs:
       - name: impossible action
         run: ./file_doesn_t_exist.sh
   second_print:
+    if: always()
     name: my second print job
     needs: first_print
     runs-on: ubuntu-latest
