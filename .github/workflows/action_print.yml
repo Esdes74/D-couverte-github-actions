@@ -2,9 +2,15 @@ name: Print action
 run-name: ${{ github.actor }}'s test github action
 on: push
 jobs:
-  print:
+  first_print:
     name: my first print job
     runs-on: ubuntu-latest
     steps:
       - name: first print
         run: echo this is a first print
+  second_print:
+    needs: first_print
+    runs-on: ubuntu-latest
+    steps:
+      - name: second print
+        run: echo tis is a second print
