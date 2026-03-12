@@ -28,4 +28,4 @@ jobs:
       - name: Send hello world
         run: |
           MESSAGE="Hello world"
-          curl -X POST ${{ secrets.WEBHOOK_URL }} -H 'Content-type: application/json' --data "{\"text\": $MESSAGE}"
+          curl -X POST ${{ secrets.WEBHOOK_URL }} -H 'Content-type: application/json' --data "{\"text\": \"$MESSAGE\"}"
