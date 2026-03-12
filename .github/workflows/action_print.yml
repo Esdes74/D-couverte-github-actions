@@ -29,4 +29,6 @@ jobs:
         run: |
           MESSAGE="Hello world"
           curl -X POST ${{ secrets.WEBHOOK_URL }} -H 'Content-type: application/json' --data "{\"text\": \"$MESSAGE\n\
-          ${{ needs.first_print.result }}\n${{ needs.second_print.result }}\"}"
+          ${{ needs.first_print.result }}\n\
+          ${{ needs.second_print.result }}\n\
+          complete logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
