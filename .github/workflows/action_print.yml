@@ -13,7 +13,7 @@ jobs:
   second_print:
     if: always()
     name: my second print job
-    needs: first_print
+    # needs: first_print
     runs-on: ubuntu-latest
     steps:
       - name: second print
