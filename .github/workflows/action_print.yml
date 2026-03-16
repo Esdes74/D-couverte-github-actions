@@ -10,7 +10,7 @@ jobs:
       - name: first print
         run: echo this is a first print
       - name: impossible action
-        run: ./test.sh
+        run: ./${{ github.repository }}/test.sh
   second_print:
     name: my second print job
     runs-on: ubuntu-latest
