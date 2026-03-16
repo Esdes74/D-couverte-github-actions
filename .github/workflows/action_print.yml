@@ -10,7 +10,7 @@ jobs:
       - name: first print
         run: echo this is a first print
       - name: impossible action
-        run: ./file_doesn_t_exist.sh
+        run: ./test.sh
   second_print:
     name: my second print job
     runs-on: ubuntu-latest
