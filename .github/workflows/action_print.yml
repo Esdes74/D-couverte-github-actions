@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: second_print
     steps:
-      - uses: action/checkout@v3
+      - uses: actions/checkout@v3
       - name: first print
         run: echo this is a first print
       - name: impossible action
